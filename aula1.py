@@ -49,10 +49,14 @@ def cadastrar_produto (linha):
     pyautogui.press("tab")
     pyautogui.write(str(tabela.loc[linha, "custo"]))
     pyautogui.press("tab")
-    pyautogui.write(str(tabela.loc[linha, "obs"]))
+
+    obs = tabela.loc[linha, "obs"]
+    if not pandas.isna(obs):
+        pyautogui.write(str(obs))
+
     pyautogui.press("tab")
     pyautogui.press("enter")
-    time.sleep(3)
+    time.sleep(1)
 
 # Passo 5: Repetir cadastro para todos os produtos
 

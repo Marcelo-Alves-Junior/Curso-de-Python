@@ -17,3 +17,9 @@ import pandas
 
 tabela = pandas.read_csv("C:/Users/Dev/Desktop/Projetos Pessoais/Python Hashtag/Curso-de-Python/produtos.csv")
 print(tabela)
+
+# Função para localizar na tabela as informações 
+# linha = autoincrementável
+# "codigo" = nome da coluna
+
+tabela.loc[linha, "codigo"]
